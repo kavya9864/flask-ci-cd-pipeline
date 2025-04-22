@@ -17,7 +17,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Cache Docker layers
-      uses: actions/cache@v2
+      uses: actions/cache@v3  # Updated to v3
       with:
         path: /tmp/.buildx-cache
         key: ${{ runner.os }}-buildx-${{ github.sha }}
@@ -26,9 +26,10 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t your-docker-username/your-repo-name:latest .
+        docker build -t kavyasree/flask-ci-cd-pipeline:latest .
 
     - name: Push Docker image to Docker Hub
       run: |
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
         docker push kavyasree/flask-ci-cd-pipeline:latest
+
