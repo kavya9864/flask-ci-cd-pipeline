@@ -33,7 +33,11 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
+<<<<<<< HEAD
 set -gx VIRTUAL_ENV /home/ubuntu/flask-ci-cd-demo/venv
+=======
+set -gx VIRTUAL_ENV /home/ubuntu/venv
+>>>>>>> f5280b2 (Initial commit with Flask app and Docker setup)
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"bin $PATH

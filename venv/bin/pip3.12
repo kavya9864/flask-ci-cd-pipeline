@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #!/home/ubuntu/flask-ci-cd-demo/venv/bin/python3
+=======
+#!/home/ubuntu/venv/bin/python3
+>>>>>>> f5280b2 (Initial commit with Flask app and Docker setup)
 # -*- coding: utf-8 -*-
 import re
 import sys

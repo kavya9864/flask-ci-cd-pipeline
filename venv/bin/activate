@@ -39,10 +39,17 @@ deactivate nondestructive
 if [ "${OSTYPE:-}" = "cygwin" ] || [ "${OSTYPE:-}" = "msys" ] ; then
     # transform D:\path\to\venv to /d/path/to/venv on MSYS
     # and to /cygdrive/d/path/to/venv on Cygwin
+<<<<<<< HEAD
     export VIRTUAL_ENV=$(cygpath /home/ubuntu/flask-ci-cd-demo/venv)
 else
     # use the path as-is
     export VIRTUAL_ENV=/home/ubuntu/flask-ci-cd-demo/venv
+=======
+    export VIRTUAL_ENV=$(cygpath /home/ubuntu/venv)
+else
+    # use the path as-is
+    export VIRTUAL_ENV=/home/ubuntu/venv
+>>>>>>> f5280b2 (Initial commit with Flask app and Docker setup)
 fi
 
 _OLD_VIRTUAL_PATH="$PATH"
